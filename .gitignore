@@ -13,6 +13,8 @@
 /.firebase
 .firebaserc
 firebase.json
+/amplify
+.amplifyrc
 .project
 .classpath
 .c9/
