@@ -1,0 +1,15 @@
+.table .dt-truncate-text {
+  position: relative;
+}
+.table .dt-truncate-text span {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  position: absolute;
+  left: 5px;
+  right: 0px;
+}
+.dt-truncate-text:before {
+  content: '';
+  display: inline-block;
+}

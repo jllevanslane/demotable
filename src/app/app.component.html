@@ -1,0 +1,12 @@
+<div class="page-header" style="text-align:center">
+  <h1>{{ title }}</h1>
+  <h2>{{ subTitle }}</h2>
+</div>
+
+<div *ngIf="data">
+  <div class="dynamic-table"
+       [dynamic-data]="data"
+       [dynamic-config]="tableConfig"
+       [dynamic-table]="'demoTable'" >
+  </div>
+</div>

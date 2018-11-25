@@ -1,0 +1,32 @@
+{
+	"providers": {
+		"awscloudformation": {
+			"AuthRoleName": "demotable-20181125123725-authRole",
+			"UnauthRoleArn": "arn:aws:iam::482002917742:role/demotable-20181125123725-unauthRole",
+			"AuthRoleArn": "arn:aws:iam::482002917742:role/demotable-20181125123725-authRole",
+			"Region": "us-west-2",
+			"DeploymentBucketName": "demotable-20181125123725-deployment",
+			"UnauthRoleName": "demotable-20181125123725-unauthRole",
+			"StackName": "demotable-20181125123725",
+			"StackId": "arn:aws:cloudformation:us-west-2:482002917742:stack/demotable-20181125123725/27b6f650-f0e1-11e8-a50b-02a485342252"
+		}
+	},
+	"hosting": {
+		"S3AndCloudFront": {
+			"service": "S3AndCloudFront",
+			"providerPlugin": "awscloudformation",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/demotable-20181125123725-deployment/amplify-cfn-templates/hosting/template.json",
+				"logicalId": "hostingS3AndCloudFront"
+			},
+			"lastPushTimeStamp": "2018-11-25T18:44:29.274Z",
+			"output": {
+				"S3BucketSecureURL": "https://demotable-host.s3.amazonaws.com",
+				"WebsiteURL": "http://demotable-host.s3-website-us-west-2.amazonaws.com",
+				"Region": "us-west-2",
+				"HostingBucketName": "demotable-host"
+			},
+			"lastPushDirHash": "80sbh0u8Ym+V/EmzxS5ZnkSP30o="
+		}
+	}
+}

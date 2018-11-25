@@ -1,0 +1,35 @@
+<div class="dataTables_info">
+  {{pagingInfo}}.&nbsp;&nbsp;&nbsp;&nbsp;Viewing&nbsp;
+  <select style="background: #f9f9f9; border: 1px solid #d7d7d7;" [(ngModel)]="pageSize" (change)="pageSizeChanged()" >
+    <option value="2">2</option>
+    <option value="5">5</option>
+    <option value="10">10</option>
+    <option value="15">15</option>
+    <option value="20">20</option>
+  </select>
+  &nbsp;rows per page.
+</div>
+
+<div class="dataTables_paginate paging_full_numbers" (mousedown)="false">
+  <a class="first paginate_button"
+     [ngClass]="{ paginate_button_disabled : currentPage == 1 }"
+     (click)="setPage(1)">First</a>
+
+  <a class="previous paginate_button"
+     [ngClass]="{ paginate_button_disabled : currentPage == 1 }"
+     (click)="setPage(currentPage - 1)">Previous</a>
+
+  <span>
+    <a *ngFor="let pageNumber of pageNumbers"
+       [ngClass]="{ paginate_active : currentPage == pageNumber, paginate_button : currentPage != pageNumber }"
+       (click)="setPage(pageNumber)">{{pageNumber}}</a>
+  </span>
+
+  <a class="next paginate_button"
+     [ngClass]="{ paginate_button_disabled : currentPage == totalPages }"
+     (click)="setPage(currentPage + 1)">Next</a>
+
+  <a class="last paginate_button"
+     [ngClass]="{ paginate_button_disabled : currentPage == totalPages }"
+     (click)="setPage(totalPages)">Last</a>
+</div>
