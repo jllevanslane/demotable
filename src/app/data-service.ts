@@ -9,7 +9,7 @@ export class DataService {
     //
     // Private data.
     //
-    private plansUrl = "https://ec2-54-188-73-240.us-west-2.compute.amazonaws.com/api/plans";
+    private plansUrl = "http://ec2-54-188-73-240.us-west-2.compute.amazonaws.com/api/plans";
 
     constructor(private http: HttpClient) {}
 
